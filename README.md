@@ -1,5 +1,7 @@
 # Hackintosh-EFI-Z490A-i710700k-5700xt
 
+安装过程参照[这里](https://fynil.cn/2020/12/Hackintosh/)
+
 > 当前OpenCore版本 0.6.4
 
 - 2020年12月17日：已直升macOS11.1, 没什么问题
