@@ -1,5 +1,8 @@
 # Hackintosh-EFI-Z490A-i710700k-5700xt
+
 > 当前OpenCore版本 0.6.4
+
+- 2020年12月17日：已直升macOS11.1, 没什么问题
 
 ## 本机配置
 
@@ -209,8 +212,6 @@ Hackintool貌似插拔没反应， 暂时搁置
 [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
 
 [Hackintool](https://github.com/headkaze/Hackintool)
-
-[USBMap](https://github.com/corpnewt/USBMap)
 
 [使用 OpenCore 引导黑苹果 - Xjn’s Blog](https://blog.xjn819.com/post/opencore-guide.html)
 
