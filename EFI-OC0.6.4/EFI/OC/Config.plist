@@ -248,12 +248,6 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwDImw==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
