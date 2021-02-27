@@ -2,7 +2,7 @@
 
 如果需要参考我的安装过程及问题解决 [点击这里](https://fynil.cn/2020/12/Hackintosh/)
 
-> 当前OpenCore版本 0.6.4
+> 当前OpenCore版本 0.6.6
 
 ## 本机配置
 
