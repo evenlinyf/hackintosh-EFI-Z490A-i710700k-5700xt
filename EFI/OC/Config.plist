@@ -859,7 +859,7 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02009902GUPHCDAD</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
@@ -871,9 +871,9 @@
 			<key>SystemProductName</key>
 			<string>iMac20,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02CC0R1PN5T</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>5005FFE5-CD22-452F-AC92-145C6F9AF24E</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>

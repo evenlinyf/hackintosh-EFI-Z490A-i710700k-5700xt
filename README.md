@@ -7,8 +7,9 @@ tags: hackintosh
 
 ---
 
-> 当前OpenCore版本 0.6.6, EFI文件地址在我的[GitHub](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt)
+> 当前OpenCore版本 0.6.6, EFI文件地址在我的[GitHub](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt)， 具体过程可以参考[Blog](https://fynil.cn/2020/12/Hackintosh/)
 
+- 2021年03月04日：完成USB Mapping
 - 2021年02月27日：已直升macOS11.2.2
 
 ## 本机配置
@@ -20,6 +21,7 @@ tags: hackintosh
 | MotherBoard | Asus ROG STRIX Z490-A Gaming 吹雪              |
 | RAM         | 32G GSkill Trident Z Royal 3200MHz DDR4 16 * 2 |
 | SSD         | Samsung NVMe 970 EVO Plus 500GB                |
+| 无线网卡    | BCM94360CD                                     |
 
 
 
@@ -51,6 +53,8 @@ Then run with either `./GenSMBIOS.command` or by double-clicking *GenSMBIOS.comm
 双击GenSMBIOS.command， 生成SMBIOS
 
 将生成的uuid等信息复制到Config.plist - PlatformInfo对应字段
+
+**请务必替换成自己的SMBIOS**
 
 - MLB 主板序列号
 - SystemProductName iMac20,1等
@@ -223,7 +227,11 @@ Asus ROG STRIX Z490-A Gaming 吹雪使用的是 **ROG SupremeFX 8** 声卡芯片
 
 #### 8 USB Map
 
-Hackintool貌似插拔没反应， 暂时搁置
+已完成
+
+Hackintool需要将SSDT-RHub.aml删除才能显示USB， map完成再放进去即可
+
+删除了USB-C还有背板USB-C边上USB的USB2.0接口
 
 
 
