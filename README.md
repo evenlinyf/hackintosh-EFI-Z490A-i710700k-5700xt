@@ -1,15 +1,6 @@
----
-layout: post
-title:  "Hackintosh"
-date:   2020-12-09 15:30:50 +80000
-tags: hackintosh
+> 当前OpenCore版本 0.7.2， macOS 版本 Big Sur 11.5.2
 
-
----
-
-> 当前OpenCore版本 0.6.6, EFI文件地址在我的[GitHub](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt)， 具体过程可以参考[Blog](https://fynil.cn/2020/12/Hackintosh/)
-
-- 2021年03月04日：完成USB Mapping
+- 2021年08月24日：升级OpenCore 0.7.2， 完成USB Mapping， 升级至macOS Big Sur 11.5.2
 - 2021年02月27日：已直升macOS11.2.2
 
 ## 本机配置
@@ -65,7 +56,7 @@ Then run with either `./GenSMBIOS.command` or by double-clicking *GenSMBIOS.comm
 
 ## 3. EFI分区
 
-为了创建EFI分区， 需要使用 [MountEFI](https://github.com/corpnewt/MountEFI) ， 使用这个工具可以为一个磁盘创建一个EFI分区。
+为了创建EFI分区，需要使用 [MountEFI](https://github.com/corpnewt/MountEFI) ， 使用这个工具可以为一个磁盘创建一个EFI分区。（或者直接使用hackintool 磁盘那里创建）
 
 安装系统前，需要为优盘创建EFI分区，最后将配置好的EFI文件夹复制到这个分区里； 安装系统后需要为Mac系统盘创建EFI分区， 并将优盘EFI分区里的EFI文件夹复制到Mac系统盘的EFI分区里， 这样就不用依赖优盘去引导macOS。注意⚠️：重启或者插拔优盘都会是EFI分区“消失”， 需要重新运行Mount.command创建（使其显示）EFI分区
 
@@ -126,7 +117,7 @@ Then run with either `./MountEFI.command` or by double-clicking *MountEFI.comman
 
 OpenCore自带的界面我是比较难以接受的， 所以按照OpenCore官方教程美化了一下界面， 只要两步：
 
-1. 首先需要将[Resources文件夹](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt)放到OC根目录下， 这个目录文件都是美化界面所需的音频、字体、图像等资源。这里的Resource文件夹是OpenCore Desktop Guide中 macOS BigSur 风格的启动界面资源
+1. 首先需要将[Resources文件夹](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt)放到OC根目录下， 这个目录文件都是美化界面所需的音频、字体、图像等资源。这里的Resource文件夹是OpenCore Desktop Guide中 macOS BigSur 风格的启动界面资源， 如果不行， 请下载最新版OpenCore Resource资源。
 
 2. 在EFI/Drivers添加OpenCanopy.efi ， 同时在config.plist - UEFI - Drivers 中添加一个 item
 
@@ -153,35 +144,7 @@ OpenCore自带的界面我是比较难以接受的， 所以按照OpenCore官方
 
 
 
-#### 2. 核显驱动
-
-> 先说结果， 暂时无法驱动
-
-i7-10700K核显是 **Intel UHD 630**
-
-按照OpenCore官方的配置
-
-DeviceProperties-Add-PciRoot(0x0)/Pci(0x2,0x0) 
-AAPL,ig-platform-id
-<0300C89B>
-
-貌似并没有驱动
-
-
-
-在网上看到以下三步
-
-* 去除platformid
-
-* 更新whatEverGreen
-
-* boot-args增加igfxfw=2
-
-  貌似也并不行😤
-
-
-
-#### 3. 有线网络
+#### 2. 有线网络
 
 Asus ROG STRIX Z490-A Gaming 吹雪主板自带的有线网卡是**Intel-I225-V**
 
@@ -193,7 +156,7 @@ Asus ROG STRIX Z490-A Gaming 吹雪主板自带的有线网卡是**Intel-I225-V*
 
 
 
-#### 4. Asus主板卡F1问题
+#### 3. Asus主板卡F1问题
 
 在Config.plist 里搜索 DisableRtcChecksum 设置为1
 
@@ -201,13 +164,13 @@ Asus ROG STRIX Z490-A Gaming 吹雪主板自带的有线网卡是**Intel-I225-V*
 
 
 
-#### 5. 节能五项
+#### 4. 节能五项
 
 添加了SSDT-PM.aml 并在Config.plist - ACPI中Add item
 
 
 
-#### 6. 声卡问题
+#### 5. 声卡问题
 
 Asus ROG STRIX Z490-A Gaming 吹雪使用的是 **ROG SupremeFX 8** 声卡芯片， 好像是**Realtek ALCS1220A**的马甲
 
@@ -215,7 +178,7 @@ Asus ROG STRIX Z490-A Gaming 吹雪使用的是 **ROG SupremeFX 8** 声卡芯片
 
 
 
-#### 7. 更改默认启动磁盘
+#### 6. 更改默认启动磁盘
 
 - 设置EFI文件夹 - OC - Config.plist   UEFI - Quirks - RequestBootVarRouting - 1 or YES
 
@@ -225,17 +188,18 @@ Asus ROG STRIX Z490-A Gaming 吹雪使用的是 **ROG SupremeFX 8** 声卡芯片
 
 
 
-#### 8 USB Map
+#### 7. USB Map
 
 已完成
 
 Hackintool需要将SSDT-RHub.aml删除才能显示USB， map完成再放进去即可
+或者使用iMac20,x_USBInjectAll_v0.7.5_z490.kext也行
 
-删除了USB-C还有背板USB-C边上USB的USB2.0接口
+删除了USB-C， 背板只有网口上一排两个USB接口支持USB3.0
 
 
 
-#### 9. macOS Windows时间不同步问题
+#### 8. macOS Windows时间不同步问题
 
 搜索cmd， 找到命令提示符， **以管理员身份运行**， 输入以下代码：
 
@@ -261,6 +225,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 [Xjn’s Blog](https://blog.xjn819.com/)
 
+ROG Z490 黑苹果交流 QQ群
+
 
 
 ### 9. 截图 Screenshoot
@@ -278,3 +244,4 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 ![CINEBENCH-CPU-MultiCore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/CINEBENCH-CPU-MultiCore.png?raw=true)
 
 ![970EVOPlus](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/970EVOPlus.png?raw=true)
+
