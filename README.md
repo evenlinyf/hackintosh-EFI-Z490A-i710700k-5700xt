@@ -235,13 +235,9 @@ ROG Z490 黑苹果交流 QQ群
 
 ![CPUScore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshCPUScore.png?raw=true)
 
-![](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshOpenCLScore.png?raw=true)
+![HackintoshOpenCLScore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshOpenCLScore.png?raw=true)
 
-![Hackintosh Metal Score](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/Hackintosh Metal Score.png?raw=true)
-
-![CINEBENCH-CPU-SingleCore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/CINEBENCH-CPU-SingleCore.png?raw=true)
-
-![CINEBENCH-CPU-MultiCore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/CINEBENCH-CPU-MultiCore.png?raw=true)
+![Hackintosh Metal Score](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshMetalScore.png?raw=true)
 
 ![970EVOPlus](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/970EVOPlus.png?raw=true)
 
