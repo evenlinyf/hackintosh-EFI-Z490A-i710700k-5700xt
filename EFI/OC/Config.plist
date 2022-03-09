@@ -502,6 +502,8 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>Strategy</key>
+				<string>Disable</string>
 			</dict>
 		</array>
 		<key>Emulate</key>
@@ -696,6 +698,36 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
+				<string>_disable_serial_output</string>
+				<key>Comment</key>
+				<string>Enable early serial output on RELEASE kernel</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<false/>
+				<key>Find</key>
+				<data></data>
+				<key>Identifier</key>
+				<string>kernel</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>Replace</key>
+				<data>AA==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
 				<string>_vstart</string>
 				<key>Comment</key>
 				<string>Print K and dead loop</string>
@@ -879,7 +911,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideAuxiliary</key>
-			<true/>
+			<false/>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -913,6 +945,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
+			<key>LogModules</key>
+			<string>*</string>
 			<key>SerialInit</key>
 			<false/>
 			<key>SysReport</key>
@@ -995,12 +1029,14 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>#INFO (prev-lang:kbd)</key>
+				<string>en:252 (ABC), set 656e3a323532</string>
 				<key>ForceDisplayRotationInEFI</key>
 				<integer>0</integer>
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>agdpmod=pikera</string>
+				<string>-v agdpmod=pikera</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
