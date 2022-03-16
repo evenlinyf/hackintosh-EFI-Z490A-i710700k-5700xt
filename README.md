@@ -1,6 +1,7 @@
 > OpenCore 0.7.9， macOS Monterey 12.2.1
 
-## ChangeLog
+## ⚠️ Do not update to macOS Monterey 12.3
+## ⚠️ 不要升级 macOS Monterey 12.3， 各种卡死
 
 ### 2022-03-10 
 Update OpenCore 0.7.9, Update macOS Monterey 12.2.1
