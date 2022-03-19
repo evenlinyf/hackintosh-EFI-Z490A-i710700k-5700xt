@@ -1,10 +1,9 @@
 > OpenCore 0.7.9， macOS Monterey 12.2.1
 
-## ⚠️ Do not update to macOS Monterey 12.3
-## ⚠️ 不要升级 macOS Monterey 12.3， 各种卡死
-
 ### 2022-03-10 
+
 Update OpenCore 0.7.9, Update macOS Monterey 12.2.1
+
 ⚠️ FakePCI*.kext may cause reboot in macOS 12, just remove all the FakePCI*.kext, and add `dk.e1000=0` at the boot-args, thank you [@CharlesCCC](https://github.com/CharlesCCC) for the [issue](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/issues/1#issue-1035692471)
 
 ### 2021-08-24
@@ -15,11 +14,11 @@ Update OpenCore 0.7.2， Finish USB Mapping， Update macOS Big Sur 11.5.2
 | Type        | Detail                                         |
 | ----------- | ---------------------------------------------- |
 | CPU         | Intel i7 10700K                                |
-| GPU         | Sapphire AMD RX 5700XT 8GB超白金               |
-| MotherBoard | Asus ROG STRIX Z490-A Gaming 吹雪              |
-| RAM         | 32G GSkill Trident Z Royal 3200MHz DDR4 16 * 2 |
+| GPU         | Sapphire AMD RX 5700XT 8GB 超白金                |
+| MotherBoard | Asus ROG STRIX Z490-A Gaming 吹雪               |
+| RAM         | 32G GSkill Trident Z Royal 3200MHz DDR4 16 two |
 | SSD         | Samsung NVMe 970 EVO Plus 500GB                |
-| Wireless Card    | BCM94360CD                                     |
+| Wireless Card  | BCM94360CD                                  |
 
 
 
@@ -61,7 +60,9 @@ Then run with either `./GenSMBIOS.command` or by double-clicking *GenSMBIOS.comm
 
 ## 3. EFI分区
 
-为了创建EFI分区，需要使用 [MountEFI](https://github.com/corpnewt/MountEFI) ， 使用这个工具可以为一个磁盘创建一个EFI分区。（或者直接使用hackintool 磁盘那里创建）
+为了创建EFI分区，需要使用 [MountEFI](https://github.com/corpnewt/MountEFI) 
+
+> 使用这个工具可以为一个磁盘创建一个EFI分区。（或者直接使用hackintool 磁盘那里创建）
 
 安装系统前，需要为优盘创建EFI分区，最后将配置好的EFI文件夹复制到这个分区里； 安装系统后需要为Mac系统盘创建EFI分区， 并将优盘EFI分区里的EFI文件夹复制到Mac系统盘的EFI分区里， 这样就不用依赖优盘去引导macOS。注意⚠️：重启或者插拔优盘都会是EFI分区“消失”， 需要重新运行Mount.command创建（使其显示）EFI分区
 
@@ -80,6 +81,8 @@ Then run with either `./MountEFI.command` or by double-clicking *MountEFI.comman
 ## 4. EFI Configuration
 
 按照[OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)配置EFI文件
+
+[OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/)
 
 **因为本机是华硕主板， 所以ACPI需要加入一个SSDT-RHUB.aml, 否则安装会失败**
 
@@ -214,23 +217,6 @@ Hackintool需要将SSDT-RHub.aml删除才能显示USB， map完成再放进去�
 ```
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
-
-
-
-## 8. 参考链接
-
-[SMBIOS](https://github.com/corpnewt/GenSMBIOS)
-
-[MountEFI](https://github.com/corpnewt/MountEFI)
-
-[OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/prerequisites.html)
-
-[OpenCore Post-Install](https://dortania.github.io/OpenCore-Post-Install/)
-
-[Hackintool](https://github.com/headkaze/Hackintool)
-
-[Xjn’s Blog](https://blog.xjn819.com/)
-
 
 
 ### 9. 截图 Screenshoots
