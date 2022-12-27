@@ -1,4 +1,14 @@
-> OpenCore 0.7.9， macOS Monterey 12.2.1
+> OpenCore 0.8.7， macOS Ventura 13.1
+
+### 2022-12-27
+Update OpenCore 0.8.7, macOS Ventura 13.1
+- SetApfsTrimTimeout set to 0 (default -1) (fix samsung 970 evo plus apfs trim)
+- Update Resources
+- Update kexts
+- To drive i225-v
+	- add SSDT-I225V
+	- add AppleIntel210Ethernet.kext (get from macOS Monterey)
+	- add boot-arg `dk.e1000=0`  —> `e1000=0`
 
 ### 2022-03-10 
 
