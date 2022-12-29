@@ -10,10 +10,13 @@ Update OpenCore 0.8.7, macOS Ventura 13.1
 	- add AppleIntel210Ethernet.kext (get from macOS Monterey)
 	- add boot-arg `dk.e1000=0`  —> `e1000=0`
 
+
 **调试及问题**
+
 SetApfsTrimTimeout 设置为0后开机启动时间大幅缩短
 
 这个版本Reset Nvram会消失， 可以在Tools里把CleanNvram.efi放到Drivers中， Config.plist 同样添加
+
 ⚠️ Reset Nvram后可能导致UEFI启动项消失， 可以[使用Easy UEFI修复](https://blog.csdn.net/weixin_45456085/article/details/127280792 "")
 
 ### 2022-03-10 
