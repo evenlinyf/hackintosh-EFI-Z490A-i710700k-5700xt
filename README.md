@@ -1,5 +1,8 @@
 > OpenCore 0.8.7， macOS Ventura 13.1
 
+
+![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
+
 ### 2022-12-27
 Update OpenCore 0.8.7, macOS Ventura 13.1
 - SetApfsTrimTimeout set to 0 (default -1) (fix samsung 970 evo plus apfs trim)
@@ -244,8 +247,6 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 
 ### 9. 截图 Screenshoots
-
-![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
 
 ![CPUScore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshCPUScore.png?raw=true)
 
