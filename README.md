@@ -3,6 +3,9 @@
 ### 2023-01-27
 Update macOS Ventura 13.2 via OTA succeeded!
 
+
+![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
+
 ### 2022-12-27
 Update OpenCore 0.8.7, macOS Ventura 13.1
 - SetApfsTrimTimeout set to 0 (default -1) (fix samsung 970 evo plus apfs trim)
@@ -12,6 +15,15 @@ Update OpenCore 0.8.7, macOS Ventura 13.1
 	- add SSDT-I225V
 	- add AppleIntel210Ethernet.kext (get from macOS Monterey)
 	- add boot-arg `dk.e1000=0`  —> `e1000=0`
+
+
+**调试及问题**
+
+SetApfsTrimTimeout 设置为0后开机启动时间大幅缩短
+
+这个版本Reset Nvram会消失， 可以在Tools里把CleanNvram.efi放到Drivers中， Config.plist 同样添加
+
+⚠️ Reset Nvram后可能导致UEFI启动项消失， 可以[使用Easy UEFI修复](https://blog.csdn.net/weixin_45456085/article/details/127280792 "")
 
 ### 2022-03-10 
 
@@ -77,7 +89,7 @@ Then run with either `./GenSMBIOS.command` or by double-clicking *GenSMBIOS.comm
 
 > 使用这个工具可以为一个磁盘创建一个EFI分区。（或者直接使用hackintool 磁盘那里创建）
 
-安装系统前，需要为优盘创建EFI分区，最后将配置好的EFI文件夹复制到这个分区里； 安装系统后需要为Mac系统盘创建EFI分区， 并将优盘EFI分区里的EFI文件夹复制到Mac系统盘的EFI分区里， 这样就不用依赖优盘去引导macOS。注意⚠️：重启或者插拔优盘都会是EFI分区“消失”， 需要重新运行Mount.command创建（使其显示）EFI分区
+安装系统前，需要为优盘创建EFI分区，最后将配置好的EFI文件夹复制到这个分区里； 安装系统后需要为Mac系统盘创建EFI分区， 并将优盘EFI分区里的EFI文件夹复制到Mac系统盘的EFI分区里， 这样就不用依赖优盘去引导macOS。注意⚠️：重启或者插拔优盘都会使EFI分区“消失”， 需要重新运行Mount.command创建（使其显示）EFI分区
 
 打开Terminal终端， 输入以下命令 Do the following one line at a time in Terminal:
 
@@ -166,10 +178,15 @@ OpenCore自带的界面我是比较难以接受的， 所以按照OpenCore官方
 
 
 #### 2. 有线网络 Intel-I225-V
+macOS 13.1
+* 在ACPI中添加 SSDT-I225V.aml
+* 在Drivers中添加 AppleIntel210Ethernet.kext (从macOS monterey 12.6 下载的， 放心使用)
+* boot-arg `dk.e1000=0`  改为  `e1000=0`
 
+@Deprecated (macOS 13)
 after macOS 12， just remove all the FakePCI*.kext, and add boot-args with `dk.e1000=0`
 
-@Deprecated macOS 12 
+@Deprecated (macOS 12) 
 Asus ROG STRIX Z490-A Gaming 吹雪主板自带的有线网卡是**Intel-I225-V**
 
 按照OpenCore官方在Config.plist - DeviceProperties 中添加device-id <F2150000>并没有作用
@@ -233,8 +250,6 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 
 ### 9. 截图 Screenshoots
-
-![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
 
 ![CPUScore](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/HackintoshCPUScore.png?raw=true)
 
