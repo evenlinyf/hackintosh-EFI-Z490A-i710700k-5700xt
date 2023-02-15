@@ -1,4 +1,9 @@
-> OpenCore 0.8.7， macOS Ventura 13.2
+> OpenCore 0.8.7， macOS Ventura 13.2.1
+
+### 2023-02-14
+Update macOS Ventura 13.2.1 via OTA succeeded!
+Valentine's Day ??? 😂
+TODO: update OpenCore 0.8.9
 
 ### 2023-01-27
 Update macOS Ventura 13.2 via OTA succeeded!
