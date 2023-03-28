@@ -1,25 +1,10 @@
-> OpenCore 0.8.7， macOS Ventura 13.2.1
+> OpenCore 0.8.7， macOS Ventura 13.3
 
-### 2023-02-14
-Update macOS Ventura 13.2.1 via OTA succeeded!
-Valentine's Day ??? 😂
-TODO: update OpenCore 0.8.9
-
-### 2023-01-27
-Update macOS Ventura 13.2 via OTA succeeded!
-
+### 2023-03-29
+Update macOS Ventura 13.3 via OTA succeeded!
+TODO: update OpenCore
 
 ![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
-
-### 2022-12-27
-Update OpenCore 0.8.7, macOS Ventura 13.1
-- SetApfsTrimTimeout set to 0 (default -1) (fix samsung 970 evo plus apfs trim)
-- Update Resources
-- Update kexts
-- To drive i225-v
-	- add SSDT-I225V
-	- add AppleIntel210Ethernet.kext (get from macOS Monterey)
-	- add boot-arg `dk.e1000=0`  —> `e1000=0`
 
 
 **调试及问题**
@@ -264,3 +249,23 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 ![970EVOPlus](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/970EVOPlus.png?raw=true)
 
+
+
+## ChangeLog
+
+### 2023-02-14
+Update macOS Ventura 13.2.1 via OTA succeeded!
+Valentine's Day ??? 😂
+
+### 2023-01-27
+Update macOS Ventura 13.2 via OTA succeeded!
+
+### 2022-12-27
+Update OpenCore 0.8.7, macOS Ventura 13.1
+- SetApfsTrimTimeout set to 0 (default -1) (fix samsung 970 evo plus apfs trim)
+- Update Resources
+- Update kexts
+- To drive i225-v
+    - add SSDT-I225V
+    - add AppleIntel210Ethernet.kext (get from macOS Monterey)
+    - add boot-arg `dk.e1000=0`  —> `e1000=0`
