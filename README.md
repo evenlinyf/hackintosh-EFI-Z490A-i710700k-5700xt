@@ -1,4 +1,8 @@
-> OpenCore 0.8.7， macOS Ventura 13.3
+> OpenCore 0.9.1， macOS Ventura 13.3.1
+
+### 2023-04-16
+1. Update OpenCore 0.9.1
+2. Update macOS Ventura 13.3.1 via OTA
 
 ### 2023-03-29
 Update macOS Ventura 13.3 via OTA succeeded!
