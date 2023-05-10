@@ -1,12 +1,7 @@
-> OpenCore 0.9.1， macOS Ventura 13.3.1
+> OpenCore 0.9.2， macOS Ventura 13.3.1
 
-### 2023-04-16
-1. Update OpenCore 0.9.1
-2. Update macOS Ventura 13.3.1 via OTA
-
-### 2023-03-29
-Update macOS Ventura 13.3 via OTA succeeded!
-TODO: update OpenCore
+### 2023-05-09
+1. Update OpenCore 0.9.2
 
 ![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
 
@@ -256,6 +251,14 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 
 
 ## ChangeLog
+
+### 2023-04-16
+1. Update OpenCore 0.9.1
+2. Update macOS Ventura 13.3.1 via OTA
+
+### 2023-03-29
+Update macOS Ventura 13.3 via OTA succeeded!
+TODO: update OpenCore
 
 ### 2023-02-14
 Update macOS Ventura 13.2.1 via OTA succeeded!
