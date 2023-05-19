@@ -1,5 +1,8 @@
 ## ChangeLog
 
+### 2023-05-19
+1. Update macOS Ventura 13.4 via OTA
+
 ### 2023-05-09
 1. Update OpenCore 0.9.2
 
