@@ -1,4 +1,4 @@
-> OpenCore 0.9.2， macOS Ventura 13.4
+> OpenCore 0.9.2， macOS Ventura 13.4.1
 
 ![AboutHackintosh](https://github.com/evenlinyf/hackintosh-EFI-Z490A-i710700k-5700xt/blob/main/Assets/AboutHackintosh.png?raw=true)
 
