@@ -1,5 +1,8 @@
 ## ChangeLog
 
+### 2023-07-27
+1. Update macOS Ventura 13.5 via OTA
+
 ### 2023-06-25
 1. Update macOS Ventura 13.4.1 via OTA
 
